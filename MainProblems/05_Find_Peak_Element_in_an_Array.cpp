@@ -33,7 +33,7 @@ int BruteforceSolution(vector<int> &nums)
 
     for (int i = 0; i < n; i++)
     {
-        bool left  = (i == 0) || (nums[i] > nums[i - 1]);
+        bool left = (i == 0) || (nums[i] > nums[i - 1]);
         bool right = (i == n - 1) || (nums[i] > nums[i + 1]);
 
         // * If both conditions satisfied → peak found
@@ -96,10 +96,10 @@ int OptimalSolution(vector<int> &nums)
 
 int main()
 {
-    vector<int> nums = {1, 2, 3, 1};
+    vector<int> nums = {1, 2, 1, 5, 2};
 
-    // int ans = BruteforceSolution(nums);
-    int ans = OptimalSolution(nums);
+    int ans = BruteforceSolution(nums);
+    // int ans = OptimalSolution(nums);
 
     cout << ans;
 

@@ -58,7 +58,7 @@ int daysRequired(vector<int> &weights, int capacity)
 int BruteforceSolution(vector<int> &weights, int D)
 {
     int maxWeight = *max_element(weights.begin(), weights.end());
-    int totalSum  = accumulate(weights.begin(), weights.end(), 0);
+    int totalSum = accumulate(weights.begin(), weights.end(), 0);
 
     for (int cap = maxWeight; cap <= totalSum; cap++)
     {
@@ -97,7 +97,7 @@ int BruteforceSolution(vector<int> &weights, int D)
 
 int OptimalSolution(vector<int> &weights, int D)
 {
-    int low  = *max_element(weights.begin(), weights.end());
+    int low = *max_element(weights.begin(), weights.end());
     int high = accumulate(weights.begin(), weights.end(), 0);
 
     int ans = high;
